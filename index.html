@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>IST Interface</title>
+        <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="https://use.typekit.net/dnb7tbs.css">
+        <script src="script/script.js" defer></script>
+    </head>
+    <body>
+        <h1 id="version">ITSI V.69</h1>
+        <div id="logInContainer">
+            <form id="logIn">
+                <label id="pwLabel">Confirm that you are not an alien.</label>
+                <input id="pwInput" type="password" placeholder="Enter Password">
+                <input id="pwEnter" type="button" value="Submit">
+                <p id="response"></p>
+            </form>
+        </div>
+        <div id="marsInfoContainerMain">
+            <div id="marsInfoContainer">
+                <div id="infoBox">
+                    <div id="closeInfo">
+                        <img src="images/cancel.png" id="closeX">
+                    </div>
+                    <h2 class="marsInformation" id="marsInfoHead">About Mars</h2>
+                    <img src="images/marsImage.png" alt="mars" id="marsImage">
+                    <p class="marsInformation" id="marsInfoText"> <i>[Source: Nasa]</i> 
+                        Despite the fact that Mars may once have been warm and wet, it is now a cold, dry, barren place with average temperatures of -81°F.
+                        The atmosphere is thin and mainly carbon dioxide. Ultraviolet and other forms of intense radiation bathe the surface, 
+                        because Mars has a thin atmosphere and no active magnetic field to protect it.</p>
+                    <p class="marsInformation" id="marsInfoText"> Interesting Facts about Mars:</p>
+                    <ul id="facts">
+                        <li>Mars is about 4.5 Million years old</li>
+                        <li>Although the lenght of an Earth day and a Mars day is quite similar, a Mars year is almost twice as long as a year on earth</li>
+                        <li>Mars has two moons: Phobos and Deimos</li>
+                        <li>You will experience 62,5% less gravity than on earth</li>
+                        <li>One earth mile equals 2 Mars miles (mmi), due to Mars being roughly half the size of the earth </li>
+                    </ul>
+                    <form id="convertMarsMiles">
+                        <label id="convertLabel"><i>Convert Earth miles to Mars miles</i></label>
+                        <input type="text" id="earthMile">
+                        <input type="button" id="earthMileConvert" value="convert">
+                        <p id="marsMiles"></p>
+                    </form>
+                    <h2 class="marsInformation" id="marsInfoHead">Mars and Earth in Comparison</h2>
+                    <p class="marsInformation" id="marsInfoText2"> <i>[Source: Nasa]</i> Geologically, Mars and Earth share a lot of common traits, and they are both known as terrestrial (or rocky) 
+                        planets. The majority of the rocks at the surface of both planets are of the igneous variety, 
+                        known as basalt (although on Earth most of this makes up the ocean floor). The layers that make up both planets are also similar: 
+                        Like Earth, Mars has an atmosphere, crust, mantle, and a core. The rocky layers are similar in composition. 
+                        In fact, all of the rocks and  all of the minerals identified on Mars to date are also found on Earth. 
+                        Like Earth, Mars has four seasons and weather. Mars has two moons, Phobos and Deimos.
+                        Of course, there are a lot of ways that the two planets are different too.
+                        Mars is smaller, has no active plate tectonics and no currently active global magnetic field. 
+                        Liquid water is generally not stable on Mars, so there currently are no standing bodies of water (rivers, lakes or seas)
+                        and the atmosphere is very thin and composed mostly of carbon dioxide. Mars has more craters still scarring 
+                        its surface than Earth (where, because of plate tectonics and weathering, lots of the surface is changed over time).</p>
+                    <h2 class="marsInformation" id="marsInfoHead">Arrival and landing procedure</h2>
+                    <img src="images/marsColony.jpg" alt="mars" id="marsImage2">
+                    <p class="marsInformation" id="marsInfoText"> In time before reaching the proximity of Mars the crew will announce the soon arrival. You will then have time to prepare
+                        yourself for the landing procedure. Go into your cabin, sit down in the seating area and fasten your seatbelts. Remain calm and watch out for further
+                        announcements or instructions. The crew will handle the landing procedure entirely.  
+                        Once arrived, there will be shuttles waiting near the landing area. Other shuttles will load your luggage and together they will bring you and your belongings to the colony. 
+                        During the trip you will have an amazing view on Mars' landscape.
+                        Upon reaching the colony, you will be guided to the main complex. There you will be briefed and then individually guided to your module. From then on
+                        you will be a Martian!
+                    </p>
+                </div>
+                <div id="marsInfoBackground"></div>
+            </div>
+        </div>
+            <div id="contentContainer">
+                <div id="metricsContainer">
+                    <div id="metricsContainerLeft">
+                        <fieldset id="displayInfo">
+                            <legend class="legend">Spaceship</legend>
+                            <div id="spaceShipInfo">
+                                <div id="spaceShipTemperature">
+                                    <p class="metrics" id="sTemperature">21</p>
+                                    <p class="metrics" id="sTemperatureMeasurement">°C</p>
+                                </div>
+                                <div id="spaceShipPressure">
+                                    <p class="metrics" id="sPressure">103.3</p>
+                                    <p class="metrics" id="sPressureMeasurement">kPA</p>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <fieldset id="displayInfo2">
+                            <legend class="legend">Spaceship Environnment</legend>
+                            <div id="spaceShipInfo">
+                                <div id="spaceShipEnvironmentTemperature">
+                                    <p class="metrics" id="seTemperature">-270.5</p>
+                                    <p class="metrics" id="seTemperatureMeasurement">°C</p>
+                                </div>
+                                <div id="spaceShipEnvironmentPressure">
+                                    <p class="metrics" id="sePressure">0</p>
+                                    <p class="metrics" id="sePressureMeasurement">kPA</p>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <div id="geforceContainerMain">
+                            <h2 id="geforce">0 G</h2>
+                            <img src="images/gforce.svg" id="gImage">
+                        </div>
+                    </div>
+                    <div id="metricsContainerMiddle">
+                        <h1 id="spaceX">SPACEX</h1>
+                        <h2 id="greeting">Welcome, pioneer.</h2>
+                        <div id="buttons">
+                            <button id="systems">Change to <em>American</em> Measurement System</button> <br>
+                            <button id="indivMetrics">Change Measurements Systems Individually</button>
+                            <div id="displayMetrics">
+                                <button id="temperature">Change to °F</button>
+                                <button id="pressure">Change to psi</button>
+                                <button id="len">Change to mi</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="metricsContainerRight">
+                        <div id="storage">
+                            <div id="food">
+                                <p id="storageIndexF">Food</p>
+                            </div>
+                            <div id="water">
+                                <p id="storageIndexW">Water</p>
+                            </div>
+                            <div id="co2">
+                                <p id="storageIndexCO2">CO2</p>
+                            </div>
+                        </div>
+                        <div id="foundation"></div>
+                        <p id="resources">Resources</p>
+                    </div>
+                </div>
+                <div id="journeyContainerMain">
+                <div id="journeyContainer">
+                    <img src="images/earthIlustration.svg" id="earth">
+                    <img src="images/earth.png" alt="earth from space" id="earthBackground">
+                    <img src="images/spaceship.svg" alt="shaceship" id="spaceship">
+                    <div id="distanceLine"></div>
+                    <div id="distanceLineProgress"></div>
+                    <div id="distanceContainer">
+                        <div id="distanceRemaining">
+                            <p class="metrics" id="distanceAmount">94155291</p>
+                            <p class="metrics" id="diMeasurement">km</p>
+                        </div>
+                        <div id="divider"></div>
+                        <div id="speedContainer">
+                            <p class="metrics" id="speed">39600</p>
+                            <p class="metrics" id="speedMeasurement">km/h</p>
+                        </div>
+                    </div>
+                    <div id="marsContainer">
+                        <img src="images/info.png" id="infoIcon">
+                        <h2 id="marsInfo">Information about Mars & the Arrival</h2>
+                        <img src="images/mars.png" id="mars">
+                    </div>
+                </div>
+            </div>  
+        </div>
+    </body>
+</html>

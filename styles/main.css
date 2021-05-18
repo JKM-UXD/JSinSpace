@@ -1,0 +1,579 @@
+body {
+    background-color: rgb(32, 35, 45);
+    font-family: 'din-2014', sans-serif;
+    color: white;
+}
+
+p {
+    font-size: 1.5em;
+    user-select: none;
+}
+
+@font-face {
+    font-family: GRIFTER, sans-serif;
+    src: url(GRIFTER.woff);
+}
+
+@font-face {
+    font-family: Aldrich, sans-serif;
+    src: url(Aldrich-Regular.woff);
+}
+
+
+
+/* Log In */
+
+#logInContainer {
+    width: 100%;
+    height: 980px;
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    z-index: 50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logIn {
+    position: absolute;
+    height: 100px;
+    width: 450px;
+    text-align: center;
+    font-family: 'Aldrich';
+}
+
+#pwLabel {
+    font-size: 1.5em;
+}
+
+#pwInput {
+    box-sizing: border-box;
+    margin-top: 10px;
+    display: inline-block;
+    width: 100%;
+    height: 30%;
+}
+
+#pwEnter {
+    box-sizing: border-box;
+    margin-top: 10px;
+    width: 100%;
+    background-color: rgb(0,0,0);
+    color: white;
+    border-color: white;
+    border-style: solid;
+    padding: 5px;
+    cursor: pointer;
+    font-family: 'din-2014';
+    font-weight: 400;
+}
+
+#response {
+    font-size: 1em;
+}
+
+
+
+
+
+/* Interface */
+
+#contentContainer {
+    display: block;
+}
+
+#metricsContainer {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#metricsContainerLeft {
+    width: 233px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#metricsContainerMiddle {
+    width: 772px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    border-top: rgb(32, 35, 45);
+    border: 5px, white;
+    border-style: solid;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 0px;
+    box-shadow: rgba(20, 20, 20, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+#metricsContainerRight {
+    width: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items:stretch;
+}
+
+
+
+
+#displayMetrics {
+    display: none;
+}
+
+#displayInfo {
+    width: 150px;
+}
+
+#displayInfo2 {
+    width: 150px;
+    margin-top: 20px;
+}
+
+.legend {
+    font-size: 12px;
+}
+
+
+/* Left Container */
+
+#spaceShipInfo {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+    user-select: none;
+    height: 100%;
+}
+
+#spaceShipTemperature, #spaceShipEnvironmentTemperature {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    width: 100%;
+    height: 50%;
+}
+
+#spaceShipPressure, #spaceShipEnvironmentPressure {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+.metrics {
+    margin: 0;
+    margin-left: 0.1em;
+    margin-right: 0.1em;
+}
+
+#gImage {
+    margin-top: 30px;
+}
+
+#geforce {
+    position: absolute;
+    left: 272px;
+    top: 420px;
+    margin: 0;
+    user-select: none;
+}
+
+
+
+
+
+/* Middle Container */
+
+
+#greeting {
+    width: 100%;
+    text-align: center;
+}
+
+#buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 50%;
+}
+
+#systems, #indivMetrics {
+    background-color: white;
+    color: rgb(32, 35, 45);
+    border-color: white;
+    border-style: solid;
+    padding: 15px;
+    margin-bottom: 1em;
+    cursor: pointer;
+    font-size: 1em;
+    font-family: 'din-2014';
+    font-weight: 400;
+}
+
+#indivMetrics {
+    background-color: rgb(32, 35, 45);
+    color: white;
+    font-size: 13px;
+}
+
+#temperature, #pressure, #len {
+    color: white;
+    background-color: rgb(32, 35, 45);
+    border-color: white;
+    border-style: solid;
+    border-width: 1px;
+    cursor: pointer;
+    font-family: 'din-2014';
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 13px;
+}
+
+#systems:hover {
+    background-color: lightgray;
+    border-color: lightgray;
+    color: rgb(32, 35, 45);
+}
+
+#indivMetrics:hover {
+    background-color: white;
+    color: rgb(32, 35, 45);
+}
+
+#temperature:hover, #pressure:hover, #len:hover {
+    background-color: white;
+    color: rgb(32, 35, 45);
+}
+
+#spaceX {
+    width: 625px;
+    height: 55px;
+    font-family: 'Aldrich';
+    letter-spacing: 0.3em;
+    font-size: 56px;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+
+
+
+/* Right Container */
+
+#storage {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: flex-end;
+}
+
+#storageIndexF {
+    transform: rotate(-90deg);
+    margin-top: 180px;
+}
+
+#storageIndexW {
+    transform: rotate(-90deg);
+    margin-top: 200px;
+}
+
+#storageIndexCO2 {
+    transform: rotate(-90deg);
+    margin-top: 190px;
+}
+
+#food {
+    width: 35px;
+    height: 235px;
+    background-color: rgb(184, 86, 51);
+}
+
+#water {
+    width: 35px;
+    height: 255px;
+    background-color: blue;
+}
+
+#co2 {
+    width: 35px;
+    height: 245px;
+    background-color: teal;
+}
+
+#foundation {
+    width: 200px;
+    height: 5px;
+    background-color: rgb(87, 87, 87);
+    margin-top: 1em;
+}
+
+#resources {
+    padding: 0;
+    margin: 0;
+    margin-top: -3em;
+    font-size: 1em;
+    color: grey;
+}
+
+
+
+
+
+/* Bottom Container */
+
+#journeyContainerMain {
+    display: flex;
+    justify-content: center;
+}
+
+#journeyContainer {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 6em;
+    width: 70%;
+}
+
+#divider {
+    width: 220px;
+    height: 3px;
+    background-color: white;
+    margin: 0.5em;
+}
+
+
+
+/* Earth */
+
+#earth {
+    width: 260px;
+    height: 260px;
+    bottom: 0;
+    border-radius: 50%;
+    box-shadow: rgba(24, 58, 167, 0.3) 0px 0px 30px;
+}
+
+#earthBackground {
+    position: absolute;
+    left: 0;
+    opacity: 20%;
+    z-index: -5;
+}
+
+
+
+
+/* Spaceship and Distance */
+
+#spaceship {
+    position: absolute;
+    /* width: 15%;
+    height: 15%; */
+    width: 10%;
+    height: 10%;
+    /* left: 600px; */
+    left: 730px;
+    opacity: 90%;
+}
+
+#distanceLine {
+    position: absolute;
+    /* width: 1018px; */
+    width: 610px;
+    height: 1px;
+    /* left: 520px; */
+    left: 700px;
+    /* top: 810px; */
+    top: 775px;
+    background:rgb(87, 87, 87);
+    border: 2px dashed rgb(32, 35, 45);
+    box-sizing: border-box;
+}
+
+#distanceLineProgress {
+    position: absolute;
+    width: 120px;
+    height: 1px;
+    /* left: 520px; */
+    left: 700px;
+    /* top: 810px; */
+    top: 775px;
+    background:lightgreen;
+    border: 2px dashed rgb(32, 35, 45);
+    box-sizing: border-box;
+}
+
+#distanceContainer {
+    height: 20%;
+    width: 25%;
+    display: flex;
+    flex-wrap: wrap;
+    align-self: flex-end;
+    justify-content: center;
+}
+
+#distanceRemaining {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#speedContainer {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+/* Mars */
+
+
+#marsContainer {
+    justify-self: end;
+    align-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 50%;
+}
+
+#marsInfo {
+    display: none;
+    position: absolute;
+    cursor: pointer;
+}
+
+#infoIcon {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+}
+
+#mars {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    box-shadow: rgba(131, 56, 22, 0.3) 0px 0px 38px;
+}
+
+
+
+
+
+
+/* Mars Information */
+
+#marsInfoContainerMain {
+    display: none;
+}
+
+#marsInfoContainer {
+    width: 100%;
+    height: 980px;
+    position: absolute;
+    display: none;
+    z-index: 50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#marsInfoBackground {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);;
+    opacity: 70%;
+}
+
+#infoBox {
+    width: 50%;
+    height: 90%;
+    position: absolute;
+    z-index: 55;
+    background-color: rgb(189, 100, 61);
+    overflow: scroll;
+}
+
+#closeInfo {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#closeX {
+    width: 30px;
+    height: 30px;
+    margin-right: 24px;
+    margin-top: 24px;
+    cursor: pointer;
+}
+
+.marsInformation {
+    padding: 2em;
+}
+
+#marsInfoHead {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+#marsInfoText {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+#marsInfoText2 {
+    padding-top: 0;
+}
+
+#facts {
+    padding-top: 0;
+    padding-left: 49px;
+    padding-right: 49px;
+    font-size: 1.5em;
+}
+
+#marsImage, #marsImage2 {
+    width: 250px;
+    height: 150px;
+    float: right;
+    padding: 30px;
+    padding-top: 0;
+    margin-top: 24px;
+    margin-right: 45px;
+}
+
+#marsImage2 {
+    width: 150px;
+    height: 250px;
+}
+
+#convertMarsMiles {
+    padding-left: 49px;
+    padding-bottom: 2em;
+    font-size: 1.5em;
+}
+
+#earthMileConvert {
+    background-color: rgb(189, 100, 61);
+    color: white;
+    border-color: white;
+    border-style: solid;
+    padding: 5px;
+    cursor: pointer;
+    font-family: 'din-2014';
+    font-weight: 400;
+}
+
+#earthMileConvert:hover {
+    background-color: lightgray;
+    border-color: lightgray;
+    color: rgb(189, 100, 61);
+}
